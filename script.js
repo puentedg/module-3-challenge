@@ -1,5 +1,6 @@
 // Assignment Code
 var generateBtn = document.querySelector("#generate");
+var passwordText = document.querySelector("#password");
 
 //ASCII charcode
 let upperCase = generateCharCode(65, 91);
@@ -14,10 +15,10 @@ let allSpecialChar = specialChar1.concat(
   specialChar3,
   specialChar4
 );
-
+let length;
 //Collect length requirement from user
 function generatePassword() {
-    let length = window.prompt("Type a value for the length of the password between 8 and 128");
+    length = window.prompt("Type a value for the length of the password between 8 and 128");
 
     if (length >=8 && length <=128) {
         return randomPassword();
@@ -55,23 +56,26 @@ function generatePassword() {
     
     if (hasLower) {
         allArrays = allArrays.concat(lowerCase);
-      }
+    }
       if (hasUpper) {
         allArrays = allArrays.concat(upperCase);
-      }
+    }
       if (hasSpecialCharacter) {
         allArrays = allArrays.concat(allSpecialChar);
-      }
+    }
       if (hasNumber) {
         allArrays = allArrays.concat(numbers);
-      }
-    
+    }
+      console.log(length);
+// Loop
       for (let i = 0; i < length; i++) {
         password = password.concat(
-          allArrays[Math.floor(Math.random() * allArrays.length)]
+          allArrays[Math.floor(Math.random()*allArrays.length)]
         );
-      }
-      return password;
+      } 
+      console.log(password);
+      passwordText.value = password;
+      return;      
     }
 //ASCII into an array
 
@@ -85,9 +89,7 @@ function generatePassword() {
 //Write password
 function writePassword() {
     var password = generatePassword();
-    var passwordText = document.querySelector("#password");
-  
-    passwordText.value = password;
+    
 }
 generateBtn.addEventListener('click', writePassword);
     
