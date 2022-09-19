@@ -1,6 +1,6 @@
 # 03 JavaScript: Random Password Generator
 
-## This is webpage is made with love ❤️.
+## This webpage is made with love ❤️.
 
 ![me](./Screen%20Shot%202022-09-19%20at%204.04.44%20PM%20(2).png)
 
