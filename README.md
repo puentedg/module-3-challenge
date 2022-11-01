@@ -1,4 +1,4 @@
-# 03 JavaScript: Random Password Generator
+# JavaScript: Random Password Generator
 
 ## This webpage is made with love ❤️.
 
